@@ -1,24 +1,5 @@
 .App {
   text-align: center;
-  padding: 20px;
+  padding: 0px;
 }
 
-.horizontal-scroll-container {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-}
-
-.art-item {
-  flex: 0 0 auto;
-  margin: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  overflow: hidden;
-  width: 300px;
-}
-
-.art-item img {
-  width: 100%;
-  height: auto;
-}

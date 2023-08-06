@@ -8,7 +8,6 @@
   scroll-behavior: smooth;
   cursor: default;
   scrollbar-width: none; /* Hide the scrollbar */
-  border-width: 5px;
 }
 
 .horizontal-scroll-container:active {
@@ -19,12 +18,14 @@
 .art-item {
   max-width: 40vw;
   min-width: 35vw;
-  margin: 20px;
   overflow: hidden;
-  padding: 5px;
   border: none;
   margin-left: 5vw;
   margin-right: 5vw;
+  flex: 0 0 auto;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 300px;
 }
 
 /* Add the shadow effect when the mouse hovers over the art-item */
@@ -33,7 +34,8 @@
 }
 
 .art-item img {
-
+  width: 100%;
+  height: auto;
   object-fit: scale-down;
   display: block;
   border: none;
