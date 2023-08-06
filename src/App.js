@@ -1,25 +1,16 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import HorizontalScrollGallery from './HorizontalScrollGallery/HorizontalScrollGallery';
 
-function App() {
+const App = () => {
+  // Replace this array with the names of your art assets.
+  const artList = ['aegina_sunset.jpeg', 'balloon_day.jpeg', 'berkeley_fiery_sky.jpeg', 'morro_bay.jpeg', 'friendly_giraffe.jpeg', 'little_boat.jpeg', 'pv_candy_sky.jpeg'];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HorizontalScrollGallery artList={artList} />
     </div>
   );
-}
+};
 
 export default App;

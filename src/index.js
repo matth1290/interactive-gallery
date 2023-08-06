@@ -2,7 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import firebase from "firebase/compat/app";
+import "firebase/firestore"; // Import the Firestore module if you want to use the Firestore database
+
+import firebaseConfig from "./firebaseConfig";
 import reportWebVitals from './reportWebVitals';
+
+firebase.initializeApp(firebaseConfig);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

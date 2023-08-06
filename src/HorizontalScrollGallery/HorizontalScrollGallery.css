@@ -1,0 +1,106 @@
+/* Add a slick font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Styling for the horizontal scroll container */
+.horizontal-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  cursor: default;
+  scrollbar-width: none; /* Hide the scrollbar */
+  border-width: 5px;
+}
+
+.horizontal-scroll-container:active {
+  cursor: grabbing;
+}
+
+/* Styling for each art item container */
+.art-item {
+  max-width: 40vw;
+  min-width: 35vw;
+  margin: 20px;
+  overflow: hidden;
+  padding: 5px;
+  border: none;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+/* Add the shadow effect when the mouse hovers over the art-item */
+.art-item img:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Adjust the shadow effect when hovered */
+}
+
+.art-item img {
+
+  object-fit: scale-down;
+  display: block;
+  border: none;
+  border-radius: 5px;
+  cursor: grab;
+}
+
+/* Styling for the metadata container */
+.metadata-container {
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
+  padding: 10px;
+}
+
+/* Styling for the title in the metadata container */
+.metadata-container p:first-child {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Styling for the artists in the metadata container */
+.metadata-container p:nth-child(2) {
+  font-size: 16px;
+}
+
+/* Styling for the description in the metadata container */
+.metadata-container p:nth-child(3) {
+  font-size: 14px;
+}
+
+/* Styling for the medium in the metadata container */
+.metadata-container p:last-child {
+  font-size: 14px;
+}
+
+.add-to-gallery-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #8AA399;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.popup-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.big-message {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    margin-bottom: 5vh;
+    color: #254E70;
+    font-size: 5vh;
+}
+
+/* ... (other CSS styles) ... */

@@ -1,0 +1,74 @@
+/* Styling for the form container */
+.popup-form {
+    font-family: 'Roboto', sans-serif;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    background-color: #F6FBFF;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 35vw;
+  }
+  
+  /* Styling for form labels */
+  .popup-form label {
+      color: #8AA399;
+    width: 90%;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left; /* Left-align the text prompts */
+  }
+  
+  /* Styling for form input fields */
+  .popup-form input,
+  .popup-form textarea {
+    text-align: left;
+    width: 97%; /* Limit the input width to 90% of the form width */
+    padding: 10px;
+    margin: 5px 0; /* Add a margin of 5px to the top and bottom, 0 to the left and right */
+    border: none; /* Remove borders */
+    border-radius: 5px;
+    background-color: white; /* Change the background color to white */
+    border: 1px solid #ccc;
+  }
+  
+  /* Styling for the submit button */
+  .popup-form button[type="submit"] {
+    font-style: bold;
+    background-color: #8AA399;
+    color: #D5F9DE;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif; /* Apply the same font to the buttons */
+  }
+  
+  /* Styling for the cancel button */
+  .popup-form .cancel-button {
+    background-color: grey;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 30%;
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif; /* Apply the same font to the buttons */
+  }
+  
+  /* Styling for the image upload field */
+  .popup-form input[type="file"] {
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for the error message */
+  .popup-form .error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
