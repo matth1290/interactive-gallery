@@ -2,16 +2,30 @@
 import React, { useEffect, useState } from 'react';
 import './HorizontalScrollGallery.css';
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
+import { getStorage, ref, getDownloadURL } from 'firebase/storage';
 import { getAuth, signOut } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import ImageWithMetadata from './ImageWithMetadata';
 import ImageUploadForm from './ImageUploadForm';
+import ImageViewer from './ImageViewer'; // Import the ImageViewer component
+
 
 const HorizontalScrollGallery = () => {
   const navigate = useNavigate();
   const [artList, setArtList] = useState([]);
   const [showForm, setShowForm] = useState(false); // State to control form visibility
   const [userEmail, setUserEmail] = useState('');
+  const [showImageViewer, setShowImageViewer] = useState(false);
+  const [selectedImageUrl, setSelectedImageUrl] = useState(null);
+
+  const handleImageClick = async (art) => {
+    setShowImageViewer(!showImageViewer);
+    console.log("Art resource:", art.resource);
+    setSelectedImageUrl(art)
+  };
+  
+  
+  
 
   const fetchImageMetadata = async () => {
     try {
@@ -67,7 +81,7 @@ const HorizontalScrollGallery = () => {
       <h1 className="big-message">Welcome to Matt's Art Gallery</h1>
       <div className="horizontal-scroll-container">
         {artList.map((art, index) => (
-          <div key={index} className="art-item">
+          <div key={index} className="art-item" onClick={() => handleImageClick(art)}>
             <ImageWithMetadata art={art} />
           </div>
         ))}
@@ -78,6 +92,8 @@ const HorizontalScrollGallery = () => {
         </button>
       )}
       {showForm && <ImageUploadForm onClose={handleCloseForm} />}
+      {/* Conditionally render the ImageViewer */}
+      {showImageViewer && <ImageViewer art={selectedImageUrl} onClose={() => setShowImageViewer(false)} />}
     </div>
   );
 };
